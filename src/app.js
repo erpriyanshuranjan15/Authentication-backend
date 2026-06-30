@@ -5,16 +5,7 @@ import authRouter from "./routes/auth.routes.js"
 // import connectDB from "../src/db.js"
 
 const app = express();
-app.use(
-  cors({
-    origin: [
-      "http://localhost:5173",
-      "https://authentication-murex-eight.vercel.app"
-    ],
-    credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE"],
-  })
-);
+app.use(cors());
 app.use(express.json());
 app.use (morgan("dev"));
 // connectDB()
